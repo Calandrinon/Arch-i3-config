@@ -126,11 +126,12 @@ xterm*|rxvt*)
 esac
 
 feh --bg-scale ~/Pictures/wallpaper.jpg
+clear
 
 if [ ! -f "/tmp/wal_set" ]; then
 	touch wal_set
 	mv wal_set /tmp
-	~/.local/bin/wal -i ~/Pictures/wallpaper.jpg
+	wal -i ~/Pictures/wallpaper.jpg
 fi
 
 export PATH="$PATH:/home/calandrinon/.local/bin/"
