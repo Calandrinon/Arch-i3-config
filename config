@@ -180,7 +180,7 @@ bar {
 		binding_mode       #2F343A #900000 #FFFFFF
 	}
 
-	font pango:Inconsolata 10
+	font pango:Inconsolata 11
 	position top
 	tray_output none
 	status_command ~/bumblebee-status/bumblebee-status -m spotify nic cpu memory sensors pasink battery date time -p nic.states="^down" -t wal-powerline
