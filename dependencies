@@ -1,0 +1,71 @@
+sudo cp .bashrc ~/
+sudo cp wallpapers/wallpaper.jpg ~/Pictures
+sudo cp config ~/.config/i3
+sudo cp .vimrc ~/
+sudo pacman -Syu 
+sudo pacman -S i3
+git clone https://github.com/tobi-wan-kenobi/bumblebee-status
+sudo mv bumblebee-status ~
+sudo pacman -S python-dev python3-dev python-pip
+sudo pip install setuptools
+sudo pip install wheel
+sudo pip install psutil
+sudo pip install netutils
+sudo pip install requests
+sudo pip install power
+sudo pip install pytz
+sudo pip install localtz
+sudo pip install pactl
+sudo pip install nvidia-smi
+sudo pip install netifaces
+sudo pacman -S lm-sensors
+sudo pacman -S ttf-font-awesome
+sudo pacman -S ttf-nerd-fonts-symbols
+sudo pacman -S powerline
+sudo pacman -S powerline-fonts
+sudo pacman -S compton
+sudo pacman -S libxcb-shape0-dev
+mkdir ~/.config/i3/
+sudo pacman -S vim
+sudo pacman -S dmenu
+sudo pacman -S libx11
+sudo pacman -S libxft
+git clone https://github.com/LukeSmithxyz/st
+cd st
+sudo make install
+sudo pacman -S nitrogen
+sudo pacman -S libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf xutils-dev libtool automake
+sudo pacman -S libxcb-xrm-dev
+cd tmp
+git clone https://www.github.com/Airblader/i3 i3-gaps
+cd i3-gaps
+git checkout gaps && git pull
+autoreconf --force --install
+rm -rf build
+mkdir build
+cd build
+../configure --prefix=/usr --sysconfdir=/etc --disable-sanitizers
+make
+sudo make install
+sudo pacman -S feh
+
+./pywal_dependencies
+sudo pip install pywal
+sudo pacman -S  install python3-setuptools
+git clone https://github.com/dylanaraps/pywal
+cd pywal
+sudo pip install --user .
+sudo export PATH="${PATH}:${HOME}/.local/bin/"
+
+sudo wal -i ~/Pictures/wallpaper.jpg
+sudo pacman -S gnome-screenshot
+
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+
+git clone https://github.com/preservim/nerdtree.git ~/.vim/pack/vendor/start/nerdtree
+vim -u NONE -c "helptags ~/.vim/pack/vendor/start/nerdtree/doc" -c q
+
+git clone https://github.com/itchyny/lightline.vim ~/.vim/pack/plugins/start/lightline
+
+vim +PluginInstall +qall
