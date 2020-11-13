@@ -183,8 +183,7 @@ bar {
 	font pango:Inconsolata 11
 	position top
 	tray_output none
-	status_command ~/bumblebee-status/bumblebee-status -m spotify nic cpu memory sensors pasink battery date time -p nic.states="^down" -t wal-powerline
-	
+	status_command ~/bumblebee-status/bumblebee-status -m spotify nic cpu memory sensors pasink battery date time -p nic.states="^down" time.format="%H:%M" -t wal-powerline
 }
 
 # Pulse Audio controls
@@ -215,3 +214,4 @@ gaps outer 10
 bindsym Print exec gnome-screenshot -i 
 #crop-area screenshot by pressing Mod + printscreen
 bindsym $mod+Print exec gnome-screenshot -a
+
